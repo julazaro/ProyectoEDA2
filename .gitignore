@@ -1,0 +1,5 @@
+# Ignorar ejecutables y compilados
+*.exe
+*.o
+*.obj
+*.tds
