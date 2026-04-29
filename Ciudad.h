@@ -15,6 +15,6 @@ class Ciudad {
         std::string getNombre();
         int getX();
         int getY();
-}
+};
 
 #endif

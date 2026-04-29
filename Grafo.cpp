@@ -33,16 +33,30 @@ void Grafo::cortarRuta(int idOrigen, int idDestino){
     matriz[idDestino][idOrigen] = INFINITO; 
 }
 
-void Grafo::imprimirMatriz(){
+void Grafo::imprimirMatriz() {
     std::cout << "\nMatriz de Adyacencia Logistica:\n";
-    for (int i = 0; i < cantidadNodos; i++){
-        for (int j = 0; j < cantidadNodos; j++){
-            if (matriz[i][j] == INFINITO){
-                std::cout << std::setw(6) << "INF";
-            } else{
-                std::cout << std::setw(6) << matriz[i][j];
+
+    // 1. Imprimir los nombres de las ciudades arriba (Cabecera de columnas)
+    std::cout << std::setw(20) << " "; 
+    for (int i = 0; i < cantidadNodos; i++) {
+        // Imprimimos el nombre de la ciudad con un ancho fijo para que quede alineado
+        std::cout << std::setw(18) << ciudades[i]->getNombre();
+    }
+    std::cout << "\n";
+
+    // 2. Imprimir las filas con sus nombres y datos
+    for (int i = 0; i < cantidadNodos; i++) {
+        // Imprimir el nombre de la ciudad a la izquierda (Cabecera de fila)
+        std::cout << std::setw(20) << ciudades[i]->getNombre();
+
+        // Imprimir las distancias o el estado de la ruta
+        for (int j = 0; j < cantidadNodos; j++) {
+            if (matriz[i][j] == INFINITO) {
+                std::cout << std::setw(18) << "CORTADA"; 
+            } else {
+                std::cout << std::setw(18) << matriz[i][j];
             }
         }
-        std::cout << "\n";
+        std::cout << "\n"; 
     }
 }
