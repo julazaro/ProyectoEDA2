@@ -52,7 +52,7 @@ void Grafo::imprimirMatriz() {
         // Imprimir las distancias o el estado de la ruta
         for (int j = 0; j < cantidadNodos; j++) {
             if (matriz[i][j] == INFINITO) {
-                std::cout << std::setw(18) << "CORTADA"; 
+                std::cout << std::setw(18) << "INF"; 
             } else {
                 std::cout << std::setw(18) << matriz[i][j];
             }
