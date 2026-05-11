@@ -130,10 +130,12 @@
     <ClCompile Include="..\..\Ciudad.cpp" />
     <ClCompile Include="..\..\Grafo.cpp" />
     <ClCompile Include="..\..\main.cpp" />
+    <ClCompile Include="Menu.cpp" />
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Ciudad.h" />
     <ClInclude Include="..\..\Grafo.h" />
+    <ClInclude Include="menu.hpp" />
   </ItemGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
   <ImportGroup Label="ExtensionTargets">

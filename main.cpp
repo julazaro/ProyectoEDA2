@@ -1,5 +1,6 @@
 #include <iostream>
 #include "Grafo.h"
+#include "menu.hpp"
 
 int main() {
     Grafo redLogistica;
@@ -62,6 +63,17 @@ int main() {
     // 4. MOSTRAR LA RED
     std::cout << "--- ESTADO INICIAL DE LA RED LOGISTICA ---\n";
     redLogistica.imprimirMatriz();
+    
+    bool seguir = true;
+    while (seguir) {
+        int opcion = mostrarMenu();   // ← la función está disponible
+         switch (opcion) {
+            case 1: std::cout << "-> Opción 1 seleccionada.\n"; break;
+            case 2: std::cout << "-> Opción 2 seleccionada.\n"; break;
+            case 3: std::cout << "-> Opción 3 seleccionada.\n"; break;
+            case 4: std::cout << "-> Saliendo...\n"; seguir = false; break;
+         }
+    }
 
     return 0;
 }

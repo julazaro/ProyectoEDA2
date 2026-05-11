@@ -3,5 +3,5 @@
     <Platform Name="x64" />
     <Platform Name="x86" />
   </Configurations>
-  <Project Path="ProyectoEDA2/ProyectoEDA2.vcxproj" />
+  <Project Path="ProyectoEDA2/ProyectoEDA2.vcxproj" Id="724f7e4c-6c51-4415-ab96-c0e64629ee05" />
 </Solution>
